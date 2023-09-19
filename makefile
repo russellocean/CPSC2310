@@ -43,7 +43,7 @@ clean:
 
 # Build and run the project with input.txt and output.txt, then with input2.txt and output2.txt
 run: build
-		./$(TARGET) input.txt -g
+		./$(TARGET) input.txt
 
 # Display the source files, header files, and object files used in the project
 which:

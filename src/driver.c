@@ -13,13 +13,11 @@ int main(int argc, char** argv)
 {
     printf("checking command line arguments\n");
 
-    if (argc < 3)
+    if (argc < 2)
     { 
         printf("not enought argument: ./exe filename\n"); 
         exit(-1);
     }
-
-    printf("opening file\n");
 
     FILE* fp = fopen(argv[1], "r");
     if(fp==NULL)

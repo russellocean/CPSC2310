@@ -9,11 +9,12 @@
 
 int** readFile(FILE* fp, int *size)
 {
-    fscanf(fp, "%d", size);
+    // Should be size
+    fscanf(fp, "%d", &size);
     int num = *size;
     int index = 0;
     
-    int** mat = (int**)malloc(num * sizeof(int*));
+    int** mat = (int**)malloc(num * sizeof(int));
     for(index = 0; index < num; index++)
         mat[index] = (int*)malloc(num * sizeof(int)); 
 
@@ -40,5 +41,5 @@ void printMatrix (int** mat, int num)
             printf("%.2d\t", mat[row][col]);
         }
         printf("\n");
-    }
+    }   
 }
